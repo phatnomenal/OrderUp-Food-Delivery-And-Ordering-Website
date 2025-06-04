@@ -1,0 +1,112 @@
+import React from "react";
+import "./TermsOfUse.css"; // Tạo file CSS riêng cho style
+
+function Header() {
+  return (
+    <header className="header">
+      <div className="logo"> {/* Thay bằng <img src="..." /> nếu có logo */} 
+        <span>FoodOrder</span>
+      </div>
+      <input className="search" placeholder="Tìm kiếm món ăn..." />
+      <div className="social-icons">
+        {/* Thêm icon mạng xã hội */}
+        <span>FB</span>
+        <span>IG</span>
+        <span>YT</span>
+      </div>
+      <nav className="main-nav">
+        <a href="/">Trang chủ</a>
+        <a href="/about">Về chúng tôi</a>
+        <a href="/contact">Liên hệ</a>
+      </nav>
+    </header>
+  );
+}
+
+function Banner() {
+  return (
+    <div className="banner">
+      <img src="banner-image.jpg" alt="Banner" className="banner-img" />
+      <div className="banner-content">
+        <h2>Chúng Tôi Có Thể Giúp Gì Cho Bạn?</h2>
+        <button>Liên hệ hỗ trợ</button>
+      </div>
+    </div>
+  );
+}
+
+function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <ul>
+        <li><a href="/terms">Điều khoản sử dụng</a></li>
+        <li><a href="/privacy">Chính sách bảo mật</a></li>
+        <li><a href="/faq">Câu hỏi thường gặp</a></li>
+        {/* Thêm các mục khác nếu cần */}
+      </ul>
+    </aside>
+  );
+}
+
+function TermsContent() {
+  return (
+    <section className="terms-content">
+      <h3>ĐIỀU KHOẢN SỬ DỤNG DÀNH CHO VẬN TẢI, GIAO NHẬN VÀ THƯƠNG MẠI</h3>
+      <p>
+        {/* Dán nội dung điều khoản sử dụng ở đây */}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
+      </p>
+      {/* Thêm các đoạn nội dung khác */}
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-section">
+        <h4>Về chúng tôi</h4>
+        <ul>
+          <li>Giới thiệu</li>
+          <li>Liên hệ</li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h4>Chính sách</h4>
+        <ul>
+          <li>Điều khoản sử dụng</li>
+          <li>Chính sách bảo mật</li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h4>Phương thức thanh toán</h4>
+        <div className="payment-icons">
+          {/* Thêm icon thanh toán */}
+          <span>Visa</span>
+          <span>Mastercard</span>
+        </div>
+      </div>
+      <div className="footer-section">
+        <h4>Download app</h4>
+        <div>
+          <button>App Store</button>
+          <button>Google Play</button>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default function TermsOfUse() {
+  return (
+    <div className="terms-page">
+      <Header />
+      <Banner />
+      <div className="main-content">
+        <Sidebar />
+        <TermsContent />
+      </div>
+      <Footer />
+    </div>
+  );
+}
